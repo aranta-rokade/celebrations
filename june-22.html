@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aranta & Harshal's Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #efe8dc;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23efe8dc'/%3E%3Crect width='1' height='1' fill='%23e6dfd5' opacity='0.3'/%3E%3C/svg%3E");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 15px;
+        }
+
+        .invitation {
+            background-color: #f7f4f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23f7f4f0'/%3E%3Crect width='1' height='1' fill='%23ede9e4' opacity='0.2'/%3E%3C/svg%3E");
+            max-width: 380px;
+            width: 100%;
+            max-height: 100%;
+            padding: 5vh 30px;
+            margin: 40px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: fit-content;
+            max-width: 60%;
+            margin: 0 auto 2vh;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-frame img {
+            max-width: 100%;
+            max-height: 45vh;
+            display: block;
+        }
+
+        .subtitle {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 300;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: #b8953f;
+            margin: 1vh 0;
+            text-transform: uppercase;
+        }
+
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            color: #b8953f;
+            text-transform: uppercase;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .name:first-of-type {
+            margin-top: 1vh;
+        }
+
+        .name:last-of-type {
+            margin-bottom: 1.5vh;
+        }
+
+        .and {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #b8953f;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .details {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #b8953f;
+            margin-top: 0.8vh;
+            line-height: 1.6;
+        }
+
+        .details a {
+            color: #b8953f;
+            text-decoration: underline;
+        }
+
+        .details a:hover {
+            opacity: 0.7;
+        }
+
+        .link-box {
+            display: inline-block;
+            border: 1.5px solid #b8953f33;
+            padding: 0 2px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+        .link-box a {
+            text-decoration: none;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .invitation {
+                padding: 2.5vh 25px;
+            }
+
+            .name {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+
+            .photo-frame {
+                max-width: 70%;
+            }
+
+            .photo-frame img {
+                max-height: 40vh;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .invitation {
+                padding: 2vh 12px;
+                box-shadow: none;
+            }
+
+            .photo-frame {
+                max-width: 75%;
+                margin-bottom: 1.5vh;
+            }
+
+            .photo-frame img {
+                max-height: 38vh;
+            }
+
+            .subtitle {
+                font-size: 0.6rem;
+                letter-spacing: 2px;
+                margin-bottom: 0.3vh;
+            }
+
+            .name {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+
+            .and {
+                font-size: 1.6rem;
+                margin: 0.3vh 0;
+            }
+
+            .details {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+                margin-top: 1vh;
+                line-height: 1.8;
+                word-break: break-all;
+            }
+
+            .details a {
+                word-break: break-all;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 360px) {
+            .invitation {
+                padding: 1.5vh 8px;
+            }
+
+            .photo-frame img {
+                max-height: 35vh;
+            }
+
+            .name {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+
+            .and {
+                font-size: 1.3rem;
+            }
+
+            .subtitle {
+                font-size: 0.55rem;
+                letter-spacing: 1.5px;
+            }
+
+            .details {
+                font-size: 0.6rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <div class="photo-frame">
+            <img src="DSCF4905.JPG" alt="Aranta and Harshal">
+        </div>
+
+        <p class="subtitle">Please join us to celebrate our<br>wedding ceremony</p>
+
+        <h1 class="name">Aranta</h1>
+
+        <p class="and">and</p>
+
+        <h1 class="name">Harshal</h1>
+
+        <div class="details">
+            <p class="link-box"><a href="https://youtube.com/live/7Msj-_1xfYE" target="_blank" rel="noopener noreferrer">LIVE LINK</a></p>
+            <p id="event-time">JUNE 22ND | 4:30 PM PST</p>
+            <p>WASHINGTON</p>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // Event: June 22, 2026 at 4:30 PM Pacific Time (America/Los_Angeles)
+            const event = new Date('2026-06-22T16:30:00-07:00');
+
+            const options = { hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short' };
+            const timeStr = event.toLocaleTimeString(undefined, options).toUpperCase();
+
+            const dayOptions = { month: 'long', day: 'numeric' };
+            const dateStr = event.toLocaleDateString(undefined, dayOptions).toUpperCase();
+
+            // Add ordinal suffix
+            const day = event.toLocaleDateString(undefined, { day: 'numeric', timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone });
+            const dayNum = parseInt(day);
+            const suffix = [,'ST','ND','RD'][dayNum % 100 >> 3 ^ 1 && dayNum % 10] || 'TH';
+
+            const formatted = dateStr.replace(dayNum, dayNum + suffix) + ' | ' + timeStr;
+            document.getElementById('event-time').textContent = formatted;
+        })();
+    </script>
+</body>
+</html>
